@@ -17,7 +17,7 @@ num=0
 correct=0
 result=[]
 pre=input('欢迎来到数学计算游戏,你准备好了吗?按Y开始\n')
-while pre=='Y' and end_time-start_time<10:
+while pre=='Y' and end_time-start_time<10:#设置时间
     a=generate_random_number()
     b=generate_random_number()
     signal_value = signal()
@@ -36,7 +36,7 @@ while pre=='Y' and end_time-start_time<10:
                 b=generate_random_number()  # 如果除数为0，重新生成一个除数
             re = a / b
     print(f'{a}{signal_value}{b}=?\n')
-    re=round(re,2)
+    re=round(re,2)#取小数点后2位
     result=round(eval(input()),2)
     if result == re:
         print('正确')
